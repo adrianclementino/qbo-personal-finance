@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Connecting</title></head>
+<body>
+<p>Returning to the local app...</p>
+<script>
+// Intuit requires an https redirect in production, so this forwards the
+// sign-in result to the script listening on the owner's own computer.
+if (location.search) location.replace("http://localhost:8000/callback" + location.search);
+</script>
+</body>
+</html>
